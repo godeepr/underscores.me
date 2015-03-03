@@ -93,9 +93,10 @@ add_action( 'after_setup_theme', 'underscoresme_setup' );
  *
  * @since Underscores.me 1.0
  */
+ 
 function underscoresme_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'underscoresme' ),
+		'name' => __( 'Sidebar Home', 'underscoresme' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
@@ -103,7 +104,28 @@ function underscoresme_widgets_init() {
 		'after_title' => '</h1>',
 	) );
 }
-//add_action( 'widgets_init', 'underscoresme_widgets_init' );
+add_action( 'widgets_init', 'underscoresme_widgets_init' );
+
+/**
+ * Register widgetized area and update sidebar with default widgets
+ */
+function magazino_widgets_init() {
+	
+	register_sidebar( array(
+		'name' => __( 'Side Sidebar', 'underscoresme' ),
+		'id' => 'sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<div class="widget-title">',
+		'after_title' => '</div>',
+	) );
+	
+	
+}
+add_action( 'widgets_init', 'magazino_widgets_init' );
+
+
+
 
 /**
  * Enqueue scripts and styles
@@ -153,3 +175,9 @@ function underscoresme_get_contributors() {
 
 	return (array) $contributors;
 }
+
+
+
+
+
+

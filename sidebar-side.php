@@ -6,19 +6,12 @@
  * @since Underscores.me 1.0
  */
 ?>
- <?php get_sidebar('side'); ?>
-		
-		<div class="clearfix"></div>
-		<div id="sidebar" class="widget-area clearfix" role="complementary">
+		<div id="sidebar-side" class="widget-area clearfix" role="complementary">
 			
-		
-			<?php do_action( 'before_sidebar' ); ?>
-			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+			<?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>
 
-				<!--<aside id="search" class="widget widget_search">
-					<?php get_search_form(); ?>
-				</aside>
-				-->
+				
+
 				<aside id="archives" class="widget">
 					<h1 class="widget-title"><?php _e( 'Archives', 'underscoresme' ); ?></h1>
 					<ul>
